@@ -31,7 +31,7 @@
 <body class="overflow-x-hidden">
     <div class="relative z-50 ">
         <nav class="theme-dark bg-background text-foreground w-full">
-            <div class="max-w-[1280px] mx-auto flex items-center justify-between h-16"><a class="flex items-center py-4"
+            <div class="max-w-[350px] lg:max-w-[1280px] mx-auto flex items-center justify-between h-16"><a class="flex items-center py-4"
                     href="/"><img class="h-8 w-auto flex-1" src="./src/assets/sonic-logo.svg" alt=""></a>
                 <div class="flex md:hidden"><button type="button"
                         class="relative -m-2.5 inline-flex items-center justify-center rounded-md p-2.5 "><span
@@ -105,7 +105,7 @@
     <main class="theme-light bg-background text-foreground flex flex-col">
         <div class="fixed h-min right-2 bottom-2 z-40 md:bottom-8 lg:bottom-16 md:right-8 lg:right-16"></div>
         <div class="lg:-mt-16">
-            <div class="relative flex min-h-screen w-full theme-dark bg-background text-foreground overflow-hidden">
+            <div class="relative   flex min-h-screen  theme-dark bg-background text-foreground overflow-hidden">
                 <div class="absolute inset-0" style="will-change: transform; contain: paint; opacity: 0.8;">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 860" fill="none"
                         class="w-full h-full opacity-80" preserveAspectRatio="xMidYMid slice"
@@ -302,36 +302,11 @@
                 </div>
                 <div class="absolute inset-0" style="will-change: transform; contain: paint; opacity: 1;">
                     <div class="relative" style="opacity: 1; will-change: auto;">
-                        <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" style="
-                                /* display: none; */
-                            ">
-                            <defs>
-                                <linearGradient id="fadeGradient" x1="0%" y1="0%" x2="0" y2="100%">
-                                    <stop offset="20%" stop-color="white" stop-opacity="0"></stop>
-                                    <stop offset="100%" stop-color="white" stop-opacity="0.6"></stop>
-                                </linearGradient>
-                                <radialGradient id="vignetteGradient" cx="0.8" cy="0" r="90%" fx="60%" fy="0%">
-                                    <stop offset="0%" stop-color="black" stop-opacity="0"></stop>
-                                    <stop offset="80%" stop-color="black" stop-opacity="0.4"></stop>
-                                </radialGradient>
-                                <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse" fill="white">
-                                    <circle cx="10" cy="10" r="1" fill="white" opacity="1"></circle>
-                                </pattern>
-                                <mask id="vignettemask">
-                                    <rect width="100%" height="100%" fill="url(#vignetteGradient)"></rect>
-                                </mask>
-                                <mask id="gridMask">
-                                    <rect width="100%" height="100%" fill="url(#grid)"></rect>
-                                </mask>
-                            </defs>
-                            <rect width="100%" height="100%" fill="url(#fadeGradient)" mask="url(#gridMask)"></rect>
-                            <rect width="100%" height="100%" fill="url(#vignetteGradient)" mask="url(#vignetteMask)">
-                            </rect>
-                        </svg>
+                    
                     </div>
                 </div>
                 <div
-                    class="max-w-[1280px] relative mx-auto flex flex-col items-center justify-center min-h-screen pointer-events-none py-12">
+                    class="max-w-[390px] lg:max-w-[1280px] relative mx-auto flex flex-col items-center justify-center min-h-screen pointer-events-none py-12">
                     <div class="flex flex-col items-center gap-4"
                         style="opacity: 1; will-change: auto; transform: none;">
                         <div class="pointer-events-auto">
@@ -776,9 +751,9 @@
             </div>
         </div>
         <section
-            class="transition-colors duration-700 bg-background text-foreground py-20 relative overflow-hidden theme-light">
+            class="transition-colors duration-700 max-w-[350px] lg:max-w-[1280px] mx-auto bg-background text-foreground py-20 relative overflow-hidden theme-light">
             <div class="absolute inset-0">
-                <div class="relative max-w-[1280px] mx-auto">
+                <div class="relative  mx-auto">
                     <div
                         class="absolute w-full top-0 opacity-50 [mask-image:linear-gradient(to_right,transparent,black_50%,black_50%,transparent)]">
                         <svg class="-scale-y-100 w-full h-40" width="100%" height="200" viewBox="0 0 100 200"
@@ -841,7 +816,7 @@
                 </div>
             </div>
             <div class="flex flex-col items-center gap-y-8 relative">
-                <div class="max-w-[1280px] mx-auto flex flex-col gap-y-4 items-center">
+                <div class="max-w-[390px] lg:max-w-[1280px] mx-auto flex flex-col gap-y-4 items-center">
                     <h2
                         class="font-urbanist text-m-h2 md:text-t-h2 lg:text-d-h2 font-medium text-center max-w-[14ch] leading-none md:leading-tight">
                         Getting started with Sonic</h2>
@@ -860,7 +835,7 @@
                                 I'm a builder</p>
                         </button></div>
                 </div>
-                <div class="max-w-[1280px] mx-auto">
+                <div class="max-w-[390px] lg:max-w-[1280px] mx-auto">
                     <div class="grid grid-cols-1 gap-4 max-w-xl mx-auto"
                         style="opacity: 1; will-change: auto; transform: none;">
                         <div style="opacity: 1; will-change: auto; transform: none;"><a target="_blank"
@@ -961,7 +936,7 @@
         </div>
 
         <div
-            class="theme-dark relative bg-background text-foreground overflow-hidden flex flex-col gap-y-12 md:gap-y-24 lg:gap-y-32 py-32 theme-dark">
+            class="theme-dark relative  bg-background text-foreground overflow-hidden flex flex-col gap-y-12 md:gap-y-24 lg:gap-y-32 py-32 theme-dark">
             <svg class="-scale-y-100 absolute top-0 left-0 w-full h-64" xmlns="http://www.w3.org/2000/svg">
                 <defs>
                     <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -994,9 +969,9 @@
                 <rect width="100%" height="281" class="fill-[url(#grad1)] theme-dark:fill-[url(#grad2)]"
                     mask="url(#spikesMask)"></rect>
             </svg>
-            <section class="relative">
+            <section class="relative max-w-[350px] lg:max-w-[1280px] mx-auto">
                 <div class="flex flex-col gap-y-8">
-                    <div class="max-w-[1280px] mx-auto flex flex-col gap-y-4 items-center text-center">
+                    <div class="max-w-[390px] lg:max-w-[1280px] mx-auto flex flex-col gap-y-4 items-center text-center">
                         <div class="z-10 relative bg-gradient-sonic-mirrored rounded-full select-none">
                             <div
                                 class="absolute w-full h-full bg-gradient-sonic-mirrored animate-gradient rounded-full blur-sm -z-10">
@@ -1018,10 +993,10 @@
                     </div>
                 </div>
             </section>
-            <div class="max-w-[1280px] mx-auto opacity-50">
+            <div class="max-w-[390px] lg:max-w-[1280px] mx-auto opacity-50">
                 <div data-orientation="horizontal" role="none" class="shrink-0 bg-border h-[1px] w-full"></div>
             </div>
-            <section class="max-w-[1280px] mx-auto">
+            <section class="max-w-[350px] lg:max-w-[1280px] mx-auto">
                 <div class="grid items-center grid-cols-1 gap-y-10 md:grid-cols-8 md:gap-x-20">
                     <div class="md:col-span-5 flex flex-col gap-y-8">
                         <div class="flex flex-col gap-y-6">
@@ -1043,10 +1018,10 @@
                     </div>
                 </div>
             </section>
-            <div class="max-w-[1280px] mx-auto opacity-50">
+            <div class="max-w-[390px] lg:max-w-[1280px] mx-auto opacity-50">
                 <div data-orientation="horizontal" role="none" class="shrink-0 bg-border h-[1px] w-full"></div>
             </div>
-            <section class="max-w-[1280px] mx-auto">
+            <section class="max-w-[350px] lg:max-w-[1280px] mx-auto">
                 <div class="grid items-center grid-cols-1 gap-y-10 md:grid-cols-8 md:gap-x-20">
                     <div class="md:col-span-5 flex flex-col gap-y-8">
                         <div class="flex flex-col gap-y-6">
@@ -1083,10 +1058,10 @@
                     </div>
                 </div>
             </section>
-            <div class="max-w-[1280px] mx-auto opacity-50">
+            <div class="max-w-[390px] lg:max-w-[1280px] mx-auto opacity-50">
                 <div data-orientation="horizontal" role="none" class="shrink-0 bg-border h-[1px] w-full"></div>
             </div>
-            <section class="max-w-[1280px] mx-auto">
+            <section class="max-w-[390px] lg:max-w-[1280px] mx-auto">
                 <dl class="grid grid-cols-1 gap-x-12 gap-y-16 lg:grid-cols-3">
                     <div class="flex flex-col" style="opacity: 0; transform: translateY(60px);">
                         <div class="flex flex-col">
