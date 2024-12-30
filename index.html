@@ -13,9 +13,11 @@
         .swiper-container {
             width: 100%;
             /* height: 96px; */
+            overflow: hidden;
         }
 
         .swiper-slide {
+            width: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -104,8 +106,8 @@
         <div class="fixed h-min right-2 bottom-2 z-40 md:bottom-8 lg:bottom-16 md:right-8 lg:right-16"></div>
         <div class="lg:-mt-16">
             <div class="relative flex min-h-screen w-full theme-dark bg-background text-foreground overflow-hidden">
-                <div class="absolute inset-0" style="will-change: transform; contain: paint; opacity: 0.8;"><svg
-                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 860" fill="none"
+                <div class="absolute inset-0" style="will-change: transform; contain: paint; opacity: 0.8;">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 860" fill="none"
                         class="w-full h-full opacity-80" preserveAspectRatio="xMidYMid slice"
                         style="transform: translate3d(0px, 0px, 0px); backface-visibility: hidden; object-fit: cover; inset: 0px;">
                         <rect width="1440" height="860" fill="#1E1E1E"></rect>
@@ -296,15 +298,37 @@
                                 <rect width="1440" height="860" fill="white"></rect>
                             </clipPath>
                         </defs>
-                    </svg></div>
+                    </svg>
+                </div>
                 <div class="absolute inset-0" style="will-change: transform; contain: paint; opacity: 1;">
-                    <div class="relative" style="opacity: 1; will-change: auto;"><canvas
-                            class="absolute inset-0 pointer-events-auto opacity-40"
-                            aria-label="Interactive background grid" width="1496" height="144"
-                            style="transform: translate3d(0px, 0px, 0px); backface-visibility: hidden;"></canvas><canvas
-                            class="absolute inset-0 pointer-events-none" aria-label="Pulse effects layer" width="1496"
-                            height="144"
-                            style="transform: translate3d(0px, 0px, 0px); backface-visibility: hidden;"></canvas></div>
+                    <div class="relative" style="opacity: 1; will-change: auto;">
+                        <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" style="
+                                /* display: none; */
+                            ">
+                            <defs>
+                                <linearGradient id="fadeGradient" x1="0%" y1="0%" x2="0" y2="100%">
+                                    <stop offset="20%" stop-color="white" stop-opacity="0"></stop>
+                                    <stop offset="100%" stop-color="white" stop-opacity="0.6"></stop>
+                                </linearGradient>
+                                <radialGradient id="vignetteGradient" cx="0.8" cy="0" r="90%" fx="60%" fy="0%">
+                                    <stop offset="0%" stop-color="black" stop-opacity="0"></stop>
+                                    <stop offset="80%" stop-color="black" stop-opacity="0.4"></stop>
+                                </radialGradient>
+                                <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse" fill="white">
+                                    <circle cx="10" cy="10" r="1" fill="white" opacity="1"></circle>
+                                </pattern>
+                                <mask id="vignettemask">
+                                    <rect width="100%" height="100%" fill="url(#vignetteGradient)"></rect>
+                                </mask>
+                                <mask id="gridMask">
+                                    <rect width="100%" height="100%" fill="url(#grid)"></rect>
+                                </mask>
+                            </defs>
+                            <rect width="100%" height="100%" fill="url(#fadeGradient)" mask="url(#gridMask)"></rect>
+                            <rect width="100%" height="100%" fill="url(#vignetteGradient)" mask="url(#vignetteMask)">
+                            </rect>
+                        </svg>
+                    </div>
                 </div>
                 <div
                     class="max-w-[1280px] relative mx-auto flex flex-col items-center justify-center min-h-screen pointer-events-none py-12">
@@ -1270,11 +1294,11 @@
     <script>
         var swiper = new Swiper('.swiper-container', {
             slidesPerView: 3,
-            speed: 2000, 
+            speed: 2000,
             loop: true,
             autoplay: {
-                delay: 0, 
-                disableOnInteraction: false, 
+                delay: 0,
+                disableOnInteraction: false,
             },
             pagination: {
                 el: '.swiper-pagination',
@@ -1285,6 +1309,10 @@
                 prevEl: '.swiper-button-prev',
             },
             breakpoints: {
+                320: {
+                    slidesPerView: 3,
+                    spaceBetween: 10,
+                },
                 640: {
                     slidesPerView: 2,
                     spaceBetween: 20,
