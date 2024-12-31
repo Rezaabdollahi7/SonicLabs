@@ -11,3 +11,22 @@ h1 {
   font-family: "BB Urbanist", sans-serif;
   font-weight: 900;
 }
+
+input:checked+label {
+  background-color: #ffb74d;
+
+}
+
+input:not(:checked)+label {
+  background-color: #ffb74d;
+
+}
+
+label span {
+  background-color: #ffffff;
+
+}
+
+#changedThemeSection{
+  margin: 0 !important; 
+}

@@ -14,6 +14,11 @@ module.exports = {
         'sonic-white': '#F5F5F5',
         'sonic-black': '#121214',
         'shade-light': '#FFEEDB',
+        'shade-1': '#0f1f2d', 
+        'shade-2': '#4e5a6b', 
+        'shade-3': '#1a3a5a',
+        'primary': '#ffb74d', 
+        'primary-foreground': '#000000',
         'card': '#1a1c1e',
       },
       borderColor: {
